@@ -1,0 +1,154 @@
+.heroSection{
+    width: 100vw;
+}
+
+.heroSection > div{
+    width: 85%;
+    margin: 20px auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.heroSection_left{
+    width: 40%;
+} 
+.heroSection_right{
+    width: 50%;
+}
+.heroSection_right_hidden{
+    margin: auto;
+    width: 50%;
+    object-fit: cover;
+    padding-left: 10px;
+    display: none;
+}
+
+.heroSection_left > p:nth-child(1){
+    color: rgb(57, 71, 227);
+    padding: 10px 0;
+}
+.heroSection_left > p:nth-child(4){
+    color: rgb(57, 71, 227);
+    padding: 20px 0;
+}
+.heroSection_left > p:nth-child(5){
+    color: rgb(172, 172, 172);
+    font-weight: 600;
+    line-height: 27px;
+}
+
+.heroSection_left > h1{
+    font-size: 37px;
+}
+
+.heroSection_left > h1 > span{
+    display: inline-block;
+    width: max-content;
+    position: relative;
+}
+.heroSection_left > h1 > span::after{
+    content: '';
+    display: block;
+    width: max-content;
+    border: 3px solid orange;
+    width: 100%;
+    position: absolute;
+    bottom: 1px;
+
+}
+
+.heroSection_left > div{
+   display: flex;
+   justify-content: flex-start;
+   margin: 5px 0;
+}
+.heroSection_left > div > button{
+    padding: 15px 13px;
+    border: 1px solid rgb(57, 71, 227);
+    cursor: pointer;
+}
+.heroSection_left > div > button:nth-child(1){
+    background-color: rgb(57, 71, 227);
+    color: whitesmoke;
+    border-radius: 3px 0 0 3px;
+}
+.heroSection_left > div > button:nth-child(2){
+    background-color: white;
+    color: rgb(57, 71, 227);
+    border-radius: 0 3px 3px 0;
+}
+
+
+
+.heroSection_right{
+    object-fit: cover;
+    padding-left: 10px;
+}
+
+
+@media screen and (max-width: 1100px) {
+
+    
+    .heroSection_left{
+        width: 45%;
+    } 
+    .heroSection_right{
+        width: 55%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    
+    
+    .heroSection > div{
+        flex-direction: column;
+        align-items: center;
+        margin: 30px auto;
+    }
+
+    .heroSection_left{
+        width: 100%;
+    } 
+    .heroSection_right{
+        display: none;
+    }
+
+    .heroSection_right_hidden{
+        width: 80%;
+        display: block;
+    }
+
+    .heroSection_left > h1{
+        font-size: 33px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    .heroSection_left > h1{
+        font-size: 25px;
+    }
+
+    .heroSection_left > h1 > span::after{
+        border: 2px solid orange;
+    }
+
+    .heroSection_left > p:nth-child(5){
+        line-height: 22px;
+    }
+    .heroSection_left > div{justify-content: center;}
+    .heroSection_left > div > button{
+        margin: 15px 0;
+        padding: 10px;
+        border: 1px solid rgb(57, 71, 227);
+        cursor: pointer;
+    }
+
+    
+    .heroSection_right_hidden{
+        width: 100%;
+        display: block;
+    }
+}

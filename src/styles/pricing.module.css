@@ -1,0 +1,165 @@
+.pricing{
+    width: 100vw;
+}
+
+.pricing > div{
+    width: 85%;
+    margin: auto
+}
+
+.pricing > div > h1{
+    width: 50%;
+    text-align: center;
+    margin: 100px auto;
+    font-weight: 600;
+}
+
+.pricing > div > h1 > span{
+    display: inline-block;
+    width: max-content;
+    position: relative;
+    margin: 0 10px;
+}
+.pricing > div > h1 > span::after{
+    content: '';
+    display: block;
+    width: max-content;
+    border: 3px solid orange;
+    width: 100%;
+
+}
+
+.pricing > div > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    overflow-x: scroll;
+}
+
+.pricingCard {
+    flex-grow: 1;
+    width: 33%;
+    padding: 20px;
+    min-width: 320px;
+}
+
+.pricingCard:nth-child(2){
+    background-color: rgb(80, 90, 208);
+    padding: 25px 20px;
+    border-radius: 5px;
+    
+}
+
+
+.pricingCard > h1{
+    color:  rgb(57, 71, 227);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.pricingCard:nth-child(2) > h1{
+    color: white;
+}
+
+.pricingCard > p:nth-child(2){
+    padding: 20px 0;
+    color: gray;
+}
+
+.pricingCard:nth-child(2) > p:nth-child(2){
+    color: white;
+}
+
+.pricingCard > p:nth-child(2)> span{
+    font-size: 30px;
+    font-weight: bolder;
+    color: rgb(57, 71, 227);
+}
+
+.pricingCard:nth-child(2) > p:nth-child(2)> span{
+    color: white;
+}
+
+.pricingCard > p:nth-child(3){
+    color: rgb(57, 71, 227);
+    padding: 10px 0;
+    font-size: 17px;
+}
+
+.pricingCard:nth-child(2) > p:nth-child(3){
+    color: white;
+}
+
+
+.pricingCard > ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 14px;
+}
+
+.pricingCard li{
+    margin: 10px 0;
+    color: rgb(57, 71, 227);
+}
+
+.pricingCard:nth-child(2) li{
+    color: white;
+}
+
+.pricingCard > ul > li::before {
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    background: url('../Assets/Group\ 35.png') white;
+    background-size: contain;
+}
+
+
+.pricingCard > button{
+    color: rgb(57, 71, 227);
+    padding: 20px;
+    width: 100%;
+    font-size: 17px;
+    border: 2px solid rgb(57, 71, 227);
+    background: white;
+    margin: 15px 0;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    .pricing > div > h1{
+        display: none;
+    }
+
+    .pricing > div{
+        margin: 50px auto;
+        overflow: scroll;
+
+    }
+
+    .pricing > div > div{
+        width: min-content;        
+    }
+}
+
+
+@media screen and (max-width: 1100px) {
+
+    .pricing > div{
+        overflow: scroll;
+
+    }
+
+    .pricing > div > div{
+        width: min-content;        
+    }
+}

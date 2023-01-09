@@ -1,0 +1,108 @@
+.drower{
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    right: 0;
+    width: 45%;
+    height: 100vh;
+    background-color: rgba(57, 71, 227, 0.158);
+
+    display: flex;
+
+    transform: translateX(2000px);
+    transition: all .5s ease-in-out;
+}
+
+.drower > div{
+    width: 100%;
+    border: 1px solid rgb(241, 241, 241);
+    background-color: white;
+}
+
+.drowerOpen{
+    transform: translateX(0);
+}
+
+/* .drowerClose{
+    transform: translateX(500px);
+} */
+
+
+
+.drower > div > div > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+}
+
+.drower > div > div > div > img{
+    width: 100px;
+}
+.drower > div > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.drower > div > div > a{
+    padding: 20px;
+    border-bottom: 1px solid rgb(241, 241, 241);
+    text-decoration: none;
+}
+.drower > div > div > a:nth-child(2){
+    border-top: 1px solid rgb(241, 241, 241);
+}
+
+.drower > div > div > a:last-child{
+    width: max-content;
+    padding: 10px;
+    border-radius: 3px;
+    color: white;
+    background-color: rgb(82, 94, 237);
+    transition: background-color .3s ease-in-out;
+    margin: 10px 15px;
+}
+.drower > div > div >a:last-child:hover {
+    background-color: rgb(57, 71, 227);
+}
+
+
+.close{
+    cursor: pointer;
+}
+
+.close > span{
+    width: 25px;
+    height: 5px;
+    background-color: rgba(0, 0, 0, 0.483);
+    display: block;
+    margin: 3px;
+    border-radius: 2px;
+    transition: background-color .4s ease-in-out;
+}
+.close:hover > span{
+    background-color: rgba(0, 0, 0, 0.972);
+}
+.close > span:nth-child(1){
+    transform: rotate(45deg);
+    position: relative;
+    top: 3px;
+}
+.close > span:nth-child(2){
+    position: relative;
+    top: -5px;
+    transform: rotate(-45deg)
+}
+
+@media screen and (max-width: 576px) {
+    .drower{
+        width: 65%;
+    }
+}
+
+@media screen and (max-width: 476px) {
+    .drower{
+        width: 80%;
+    }
+}
+
